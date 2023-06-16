@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: hsl(206 94% 87% / 0.5);
+}
+
+.form-body {
+  @apply transform -translate-y-vh-10 bg-white px-4 py-5 rounded-md shadow-lg mx-auto w-11/12;
+}
+
+.form-body-md {
+  @apply md:col-start-2 md:col-span-2 md:row-start-1 md:transform md:translate-y-0 md:mt-10 md:shadow-none;
+}
+
+.form-heading {
+  @apply text-marine-blue text-2xl font-bold mb-3 md:text-3xl;
+}
+
+.form-label {
+  @apply text-marine-blue font-bold text-xs md:text-lg;
+}
+
+.form-input {
+  @apply rounded-md border px-3 py-2 w-full placeholder:text-cool-gray text-marine-blue focus:outline-marine-blue md:px-4 md:py-3 md:mt-1;
+}
+
+.form-option-container {
+  @apply flex items-center gap-3 cursor-pointer p-3 border border-light-gray duration-200 rounded-md md:flex-col md:px-3 md:py-7 md:flex-1 md:items-start md:max-w-px-112;
+}
+
+.btn-active {
+  @apply bg-pastel-blue text-marine-blue border-pastel-blue;
+}
+
+.btn-text-step {
+  @apply hidden md:block uppercase text-cool-gray text-xs;
+}
+
+.btn-text-page {
+  @apply hidden md:block uppercase text-white font-bold;
+}
+
+.duration-btn[data-plan-duration='yearly']::after {
+  transform: translateX(120%);
+}
+
+.selected-plan {
+  @apply bg-light-blue bg-opacity-10 border-marine-blue;
+}
+
+.input-check-box {
+  @apply grid place-items-center appearance-none cursor-pointer w-5 aspect-square bg-white border border-cool-gray rounded-md before:w-3 before:aspect-square before:bg-white before:transform before:scale-0 duration-200 checked:bg-purple-blue checked:before:scale-100;
+}
+
+.input-check-box::before {
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.form-add-ons-checked {
+  @apply bg-light-blue bg-opacity-10 border-marine-blue;
+}
